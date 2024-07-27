@@ -15,8 +15,7 @@ struct PreviewView: View {
 
     var body: some View {
         
-//        ImageView(image: model.previewImage )
-        Color.black
+        ImageView(image: model.previewImage )
             .padding(.bottom, footerHeight)
             .overlay(alignment: .bottom) {
                 buttonsView()

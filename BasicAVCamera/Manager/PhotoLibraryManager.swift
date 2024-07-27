@@ -73,7 +73,6 @@ class PhotoLibraryManager {
                     let creationRequest = PHAssetCreationRequest.forAsset()
                     if let assetPlaceholder = creationRequest.placeholderForCreatedAsset {
                         creationRequest.addResource(with: .photo, data: imageData, options: nil)
-                        
                         if let albumChangeRequest = PHAssetCollectionChangeRequest(for: assetCollection), assetCollection.canPerform(.addContent) {
                             let fastEnumeration = NSArray(array: [assetPlaceholder])
                             albumChangeRequest.addAssets(fastEnumeration)
